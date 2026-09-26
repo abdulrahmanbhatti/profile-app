@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-const Profile = require('./models/Profile');
+const Profile = require('./models/profile');
 
 
 
