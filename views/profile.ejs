@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      User Profile - <%= profile.firstName %> <%= profile.lastName %>
+    </title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="modal-card">
+      <div class="card-content">
+        <div class="left-col">
+          
+          <div class="avatar-wrapper">
+            <img
+              src="<%= profile.avatarUrl || '/my.jpeg' %>"
+              alt="Profile Avatar"
+              class="avatar-img"
+            />
+          </div>
+          <button type="button" class="btn-linkedin">
+            Connect to Linkedin
+          </button>
+
+          <a href="/profile/edit" class="edit-link">✎ Edit</a>
+        </div>
+
+        <div class="right-col">
+          <h2 class="title">My Profile</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>FIRST NAME</label>
+              <div class="display-box"><%= profile.firstName %></div>
+            </div>
+            <div class="form-group">
+              <label>LAST NAME</label>
+              <div class="display-box"><%= profile.lastName %></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>TIME ZONE</label>
+              <div class="display-box"><%= profile.timeZone %></div>
+            </div>
+            <div class="form-group">
+              <label>PHONE</label>
+              <div class="display-box"><%= profile.phone %></div>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>EMAIL ADDRESS</label>
+            <div class="display-box"><%= profile.email %></div>
+          </div>
+
+          <div class="auth-section">
+            <h3>Authentication</h3>
+            <div class="info-block">
+              <span class="info-label">SAML ID</span>
+              <p class="info-val"><%= profile.samlId %></p>
+            </div>
+            <div class="info-block">
+              <span class="info-label">SAML DETAILS</span>
+              <a
+                href="<%= profile.samlDetails %>"
+                class="info-link"
+                target="_blank"
+                ><%= profile.samlDetails %></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <a href="/profile/edit" class="btn-edit-main">Edit Profile</a>
+      </div>
+    </div>
+  </body>
+</html>

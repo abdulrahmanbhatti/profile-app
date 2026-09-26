@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #d6dbdf;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 680px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.card-content {
+  display: flex;
+  gap: 30px;
+  padding: 35px 35px 25px 35px;
+}
+
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+}
+
+.avatar-wrapper {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #f0f3f6;
+  margin-bottom: 14px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-linkedin {
+  background-color: #0e869b;
+  color: #ffffff;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.edit-link {
+  color: #9aa0a6;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+/* Right Column */
+.right-col {
+  flex: 1;
+}
+
+.title {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #8c939b;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+input, select {
+  background-color: #f2f4f6;
+  border: 1px solid transparent;
+  color: #333;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  background-color: #fff;
+  border-color: #0e869b;
+}
+
+/* Authentication Section */
+.auth-section {
+  border-top: 1px solid #edf0f2;
+  padding-top: 15px;
+}
+
+.auth-section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.info-block {
+  margin-bottom: 10px;
+}
+
+.info-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  color: #9aa0a6;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.info-val {
+  font-size: 12px;
+  color: #4f565e;
+}
+
+.info-link {
+  font-size: 12px;
+  color: #555e68;
+  word-break: break-all;
+  text-decoration: none;
+}
+
+/* Footer Controls */
+.card-footer {
+  background-color: #e9ecef;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-cancel, .btn-confirm {
+  width: 140px;
+  height: 34px;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.btn-cancel {
+  background-color: #ffffff;
+  color: #7d848c;
+}
+
+.btn-confirm {
+  background-color: #32c45c;
+  color: #ffffff;
+}
+
+.btn-cancel:hover, .btn-confirm:hover {
+  opacity: 0.9;
+}
+
+/* Static View mode ke boxes */
+.display-box {
+  background-color: #f2f4f6;
+  color: #333;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-edit-main {
+  background-color: #0e869b;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 24px;
+  border-radius: 17px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.btn-edit-main:hover {
+  opacity: 0.9;
+}

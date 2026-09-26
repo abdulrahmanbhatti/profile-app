@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile - <%= profile.firstName %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="modal-card">
+    <form action="/profile?_method=PUT" method="POST">
+      
+      <div class="card-content">
+     
+        <div class="left-col">
+          <div class="avatar-wrapper">
+            <img src="<%= profile.avatarUrl %>" alt="Profile Avatar" class="avatar-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80'">
+          </div>
+          <button type="button" class="btn-linkedin" disabled style="opacity: 0.6;">Connect to Linkedin</button>
+          <span style="font-size: 12px; color: #0e869b; margin-top: 8px;">Editing Mode</span>
+        </div>
+
+        <!-- Right Side: Edit Inputs -->
+        <div class="right-col">
+          <h2 class="title">Edit Profile</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>FIRST NAME</label>
+              <input type="text" name="firstName" value="<%= profile.firstName %>" required>
+            </div>
+            <div class="form-group">
+              <label>LAST NAME</label>
+              <input type="text" name="lastName" value="<%= profile.lastName %>" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>TIME ZONE</label>
+              <select name="timeZone">
+                <option value="+5 GMT" <%= profile.timeZone === '+5 GMT' ? 'selected' : '' %>>+5 GMT</option>
+                <option value="+0 GMT" <%= profile.timeZone === '+0 GMT' ? 'selected' : '' %>>+0 GMT</option>
+                <option value="-5 EST" <%= profile.timeZone === '-5 EST' ? 'selected' : '' %>>-5 EST</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>PHONE</label>
+              <input type="text" name="phone" value="<%= profile.phone %>">
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>EMAIL ADDRESS</label>
+            <input type="email" name="email" value="<%= profile.email %>" required>
+          </div>
+
+          <div class="auth-section">
+            <h3>Authentication Details</h3>
+            <div class="form-group full-width">
+              <label>SAML ID</label>
+              <input type="text" name="samlId" value="<%= profile.samlId %>">
+            </div>
+            <div class="form-group full-width">
+              <label>SAML DETAILS URL</label>
+              <input type="text" name="samlDetails" value="<%= profile.samlDetails %>">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+      <div class="card-footer">
+        <a href="/profile" class="btn-cancel" title="Cancel">Cancel</a>
+        <button type="submit" class="btn-confirm" title="Save Changes">✓</button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
