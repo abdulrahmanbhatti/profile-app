@@ -29,7 +29,7 @@ body {
   padding: 35px 35px 25px 35px;
 }
 
-/* Left Column (Avatar & Actions) */
+
 .left-col {
   display: flex;
   flex-direction: column;
@@ -75,10 +75,10 @@ body {
   margin-top: 8px;
 }
 
-/* Right Column (Form Details) */
+
 .right-col {
   flex: 1;
-  min-width: 0; /* Flex child overflow rokne ke liye lazmi hai */
+  min-width: 0; 
 }
 
 .title {
@@ -134,7 +134,7 @@ select:focus {
   border-color: #0e869b;
 }
 
-/* Static View mode ke boxes */
+
 .display-box {
   background-color: #f2f4f6;
   color: #333;
@@ -145,11 +145,11 @@ select:focus {
   display: flex;
   align-items: center;
   width: 100%;
-  word-break: break-all;     /* Email overflow fix */
+  word-break: break-all;    
   overflow-wrap: anywhere;
 }
 
-/* Authentication Section */
+
 .auth-section {
   border-top: 1px solid #edf0f2;
   padding-top: 15px;
@@ -188,7 +188,7 @@ select:focus {
   text-decoration: none;
 }
 
-/* Footer Controls */
+
 .card-footer {
   background-color: #e9ecef;
   padding: 12px 30px;
@@ -241,7 +241,6 @@ select:focus {
   opacity: 0.9;
 }
 
-/* --- MOBILE RESPONSIVE FIX (Screens under 650px) --- */
 @media screen and (max-width: 650px) {
   body {
     padding: 10px;
@@ -252,7 +251,7 @@ select:focus {
     border-radius: 6px;
   }
 
-  /* Side-by-side layout ko Vertical column banayein */
+ 
   .card-content {
     flex-direction: column !important;
     align-items: center;
@@ -275,7 +274,7 @@ select:focus {
     margin-bottom: 16px;
   }
 
-  /* First Name aur Last Name ko 1 column karein */
+
   .form-row {
     flex-direction: column !important;
     gap: 12px;
