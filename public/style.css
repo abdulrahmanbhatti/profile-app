@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 body {
@@ -28,7 +30,6 @@ body {
   gap: 30px;
   padding: 35px 35px 25px 35px;
 }
-
 
 .left-col {
   display: flex;
@@ -107,7 +108,8 @@ label {
   letter-spacing: 0.5px;
 }
 
-input, select {
+input,
+select {
   background-color: #f2f4f6;
   border: 1px solid transparent;
   color: #333;
@@ -118,7 +120,8 @@ input, select {
   transition: all 0.2s ease;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   background-color: #fff;
   border-color: #0e869b;
 }
@@ -170,7 +173,8 @@ input:focus, select:focus {
   gap: 15px;
 }
 
-.btn-cancel, .btn-confirm {
+.btn-cancel,
+.btn-confirm {
   width: 140px;
   height: 34px;
   border-radius: 17px;
@@ -195,7 +199,8 @@ input:focus, select:focus {
   color: #ffffff;
 }
 
-.btn-cancel:hover, .btn-confirm:hover {
+.btn-cancel:hover,
+.btn-confirm:hover {
   opacity: 0.9;
 }
 
@@ -223,4 +228,87 @@ input:focus, select:focus {
 }
 .btn-edit-main:hover {
   opacity: 0.9;
+}
+
+/* Box sizing sab elements ke liye ensure karein */
+* {
+  box-sizing: border-box;
+}
+
+/* Container responsive karein */
+.container,
+.card,
+form {
+  width: 100% !important;
+  max-width: 650px; /* Desktop par zyada failay na */
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Mobile Screens ke liye (768px se chhoti screens) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  /* Agar form do columns mein tha to mobile par 1 column ho jaye */
+  .form-row,
+  .row,
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea,
+  button {
+    width: 100% !important;
+  }
+
+  /* Profile picture scale ho jaye */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Email text aur input fields ko break aur fit karein */
+.email-box,
+input[type="email"],
+input,
+p,
+div {
+  word-break: break-all; /* Lambe email address ko next line par shift karega */
+  overflow-wrap: anywhere; /* Text ko container se bahar nahi jaane dega */
+  box-sizing: border-box; /* Padding ko width ke andar rakhega */
+  max-width: 100%; /* Box card se bahar nahi niklega */
+}
+
+/* Card layout ko mobile par flexible karein */
+@media (max-width: 600px) {
+  /* Agar avatar aur fields side-by-side (flex) hain to column bana dein */
+  .profile-container,
+  .card-body,
+  .main-content {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .right-side,
+  .form-group,
+  .field {
+    width: 100% !important;
+    min-width: 0 !important; /* Flex child overflow rokne ke liye */
+  }
+
+  input,
+  .input-value {
+    width: 100% !important;
+    font-size: 13px !important; /* Mobile par email text thoda compact rahe */
+    padding: 8px !important;
+  }
 }
